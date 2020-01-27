@@ -1,7 +1,9 @@
+//wrapped code in an immediately invoked fuction for safety.
+//Creates its own execution context.
 ;(function(global, jQuery){
-    
     //so that you won't have to use the 'new' keyword everytime greetr is used.
     var Greetr = function(firstName, lastName, language){
+        //returns results of constructor(Greetr.init)
         return new Greetr.init(firstName, lastName, language)
     }
     //hidden within the scope of the IIFE and never directly accessible
